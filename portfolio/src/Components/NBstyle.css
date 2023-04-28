@@ -1,0 +1,112 @@
+
+.header{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 90px;
+    background: rgba(84, 63, 161, 0.568);
+    justify-content: space-between;
+    align-items: center;
+    
+    z-index: 1;
+}
+
+.nav-menu{
+    display: flex;
+    padding-right: 2rem;
+}
+
+.nav-title{
+    padding: 1rem 2rem;
+    animation: WaveAnim 3s ease-in-out 0s infinite alternate;
+}
+
+.nav-menu li{
+    padding: 0 1rem ;
+    animation: WaveAnim 3s ease-in-out 0s infinite alternate;
+    
+}
+
+.nav-menu li a{
+    font-size: 1.8rem;
+    font-weight: 500;
+    
+}
+
+.hamb{
+    display: none;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .nav-title{
+        
+        padding: 1.2rem 2rem;
+        top: -100%;
+        position: absolute;
+        transition: 0.5s all;
+
+        
+
+        
+    }
+
+    .header{
+        background: transparent;
+        padding-left: -20%;
+        transition: 1s all;
+        align-items: center;
+        
+    }
+
+    .nav-menu{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: -100%;
+        transition: 0.8s all;
+        right: 0;
+        z-index: 0;
+        padding-left: 8rem;
+        
+        
+    }
+    .header.active{
+        background: rgba(84, 63, 161, 0.568);
+        
+    }
+    .nav-menu.active{
+        top: 0;
+    }
+    .nav-title.active{
+        top: 0;
+    }
+    
+    .nav-menu li{
+        padding: 1.2rem;
+    }
+
+    
+
+    .nav-menu li a{
+        font-size: 2rem;
+    }
+
+    .hamb{
+        display: initial;
+        z-index: 1;
+        right: 1rem;
+        top: 1rem;
+        position: fixed;
+    }
+}
+
+@keyframes WaveAnim{
+    0% { transform: translate(0, -7px) rotate(2deg);}
+    100%   { transform: translate(0, 3px) rotate(-2deg);}
+
+}
+
+
