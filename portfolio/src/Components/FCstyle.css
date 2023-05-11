@@ -1,0 +1,41 @@
+label{
+    color: rgb(250, 243, 255);
+    margin-bottom: 0.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem, 1rem;
+    margin: auto;
+    max-width: 600px;
+}
+
+form input, form textarea{
+    margin-bottom: 1rem;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    background-color: rgb(77, 48, 110);
+    border-color: rgba(255, 255, 255, 0.425);
+    color: rgb(247, 234, 255);
+}
+
+.form{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form h1{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.socialContact{
+    margin-top: 2rem;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
