@@ -1,0 +1,84 @@
+.project-heading{
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+
+}
+
+
+.project-container{
+
+    max-width: 1140px;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: max-content;
+    grid-gap: 1rem;
+    padding: 0 0 4rem;
+}
+
+.card-group{
+    position: relative;
+    left: -500%;
+    transition: 2s ease;
+    align-items: center;
+    
+}
+
+.project-card{
+    background: #09001f;
+    padding: 1.2rem ;
+    border: 2px solid #e2d7ff;
+    border-radius: 10px;
+    animation: WaveAnimP 8s ease-in-out 0s infinite alternate;
+    transition: 2s ease;
+    
+}
+
+.card-group.visible{
+    left: -3rem;
+}
+
+.project-card img{
+    min-width: 100%;
+
+}
+
+.project-title{
+    color: rgb(200, 175, 241);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pro-details p{
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.pro-btn-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+.pro-btn-group .btn{
+    text-align: center;
+    font-size: 1rem;
+}
+@media screen and (max-width: 1040px) {
+    .project-container{
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+    .card-group.active{
+        left: 0;
+    }
+}
+
+@keyframes WaveAnimP{
+    0% { transform: translate(0, -1.5rem);}
+    100%   { transform: translate(0, 1rem);}
+
+}

@@ -1,0 +1,65 @@
+.sobre{
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.sobre .left{
+    text-align: center;
+    padding: 1rem;
+    max-width: 500px;
+    display: inline-block;
+}
+
+.sobre .left p{
+    margin: 1.2rem 0;
+    text-align: justify;
+    height: 250px;
+    overflow: hidden;
+    width: 0;
+    border-right: .15em solid plum;
+    
+}
+.sobre .left p.visible{
+    animation: typing 1s steps(20,end) forwards;
+}
+
+.sobre .right{
+    max-width: 50vw;
+
+}
+
+.right .img-container{
+    
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+
+.right .img{
+    display: none;
+    transition: 2s ease;
+    width: 400px;
+    border: 1px solid rgb(226, 221, 255);
+}
+
+.right .img.visible{
+    display: block;
+}
+
+.right .top{
+    grid-column: 1/span 8;
+    grid-row: 1;
+    padding-top: 20%;
+    z-index: 6;
+}
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100%; border-right: 0px;}
+}
